@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@commitlint/cli': ^17.0.3
   '@commitlint/config-conventional': ^17.0.3
+  '@figma/plugin-typings': ^1.49.0
   '@heroicons/react': ^1.0.5
   '@tailwindcss/forms': ^0.5.2
   '@types/jest': ^28.1.6
@@ -38,6 +39,7 @@ dependencies:
 devDependencies:
   '@commitlint/cli': 17.0.3
   '@commitlint/config-conventional': 17.0.3
+  '@figma/plugin-typings': 1.49.0
   '@heroicons/react': 1.0.6_react@18.2.0
   '@tailwindcss/forms': 0.5.2_tailwindcss@3.1.6
   '@types/jest': 28.1.6
@@ -637,6 +639,10 @@ packages:
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@figma/plugin-typings/1.49.0:
+    resolution: {integrity: sha512-72tKC61RPkrBZ+uzj+TtL3bVAmxahZKv/TfElbrY9sBoZvr4/+4gw7hnJYiln5xBJHiJ4KTcjUy+6D1qUuWlTA==}
     dev: true
 
   /@heroicons/react/1.0.6_react@18.2.0:
