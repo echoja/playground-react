@@ -54,6 +54,11 @@ function App(): ReactElement {
         <Route path="/" element={<TestPage1 />} />
         <Route path="testp2" element={<TestPage2 />} />
       </Routes>
+      <div className="flex justify-start p-10 bg-slate-50">
+        <div className="flex-none w-[10%] p-3 bg-black/5">1</div>
+        <div className="flex-none w-[10%] p-3 bg-black/5">2</div>
+        <div className="flex-none w-[10%] p-3 bg-black/5">3</div>
+      </div>
     </div>
   );
 }
