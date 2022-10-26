@@ -2,8 +2,11 @@ import React, { ReactElement, useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import ArrayFrozenTest from './ArrayFrozenTest';
 import logo from './logo.svg';
+import Dnd from './Dnd';
 import TestPage1 from './pages/TestPage1';
 import TestPage2 from './pages/TestPage2';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 
 function App(): ReactElement {
   const [count, setCount] = useState(0);
@@ -54,11 +57,14 @@ function App(): ReactElement {
         <Route path="/" element={<TestPage1 />} />
         <Route path="testp2" element={<TestPage2 />} />
       </Routes>
-      <div className="flex justify-start p-10 bg-slate-50">
-        <div className="flex-none w-[10%] p-3 bg-black/5">1</div>
-        <div className="flex-none w-[10%] p-3 bg-black/5">2</div>
-        <div className="flex-none w-[10%] p-3 bg-black/5">3</div>
-      </div>
+      {/* <div className="flex flex-col justify-start p-10 bg-slate-50">
+        <div className="p-3 bg-black/5">1</div>
+        <div className="p-3 bg-black/5">2</div>
+        <div className="p-3 bg-black/5">3</div>
+      </div> */}
+      <DndProvider backend={HTML5Backend}>
+        <Dnd />
+      </DndProvider>
     </div>
   );
 }
