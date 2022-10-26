@@ -42,16 +42,16 @@ const Dnd: React.FC = () => {
 
   return (
     <div className="p-10 border">
-      {collected.isDragging ? (
+      {/* {collected.isDragging ? (
         <div className="border" ref={dragPreview}>
           롤로로로로라러
         </div>
-      ) : (
-        <div ref={drag} className="p-10 border">
-          이 놈을 드래그하세요!
-          {JSON.stringify(collected)}
-        </div>
-      )}
+      ) : ( */}
+      <div ref={drag} className="p-10 border">
+        이 놈을 드래그하세요!
+        {JSON.stringify(collected)}
+      </div>
+      {/* )} */}
       <div ref={drop} className="p-10 bg-slate-50">
         두롭다운
       </div>
