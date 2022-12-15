@@ -1,20 +1,23 @@
-import React, { ReactElement, useState } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { ReactElement, useState } from 'react';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+import { Link, Route, Routes } from 'react-router-dom';
+import { useScript } from 'usehooks-ts';
 import ArrayFrozenTest from './ArrayFrozenTest';
-import logo from './logo.svg';
 import Dnd from './Dnd';
 import TestPage1 from './pages/TestPage1';
 import TestPage2 from './pages/TestPage2';
-import { DndProvider } from 'react-dnd';
-import { HTML5Backend } from 'react-dnd-html5-backend';
 
 function App(): ReactElement {
   const [count, setCount] = useState(0);
+
+  useScript('https://apps.elfsight.com/p/platform.js');
 
   return (
     <div className="p-20 border shadow-xl border-gray-50 rounded-xl">
       <header>
         <ArrayFrozenTest />
+        <div className="elfsight-app-e6964b74-bec4-474b-b53b-decc105f50c9"></div>
 
         <p>
           <a
