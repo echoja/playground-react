@@ -1,6 +1,7 @@
 import { ReactElement, useCallback, useEffect, useState } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import ElfsightPage from './pages/ElfsightPage';
+import SveltePage from './pages/SveltePage';
 import TestPage1 from './pages/TestPage1';
 import TestPage2 from './pages/TestPage2';
 
@@ -35,12 +36,16 @@ function App(): ReactElement {
           <Link className="text-purple-400 underline" to="/elfsight">
             elfsight
           </Link>
+          <Link className="text-purple-400 underline" to="/svelte">
+            svelte
+          </Link>
         </p>
       </header>
       <Routes>
         <Route path="/" element={<TestPage1 />} />
         <Route path="testp2" element={<TestPage2 />} />
         <Route path="elfsight" element={<ElfsightPage />} />
+        <Route path="svelte" element={<SveltePage />} />
       </Routes>
       {/* <div className="flex flex-col justify-start p-10 bg-slate-50">
         <div className="p-3 bg-black/5">1</div>

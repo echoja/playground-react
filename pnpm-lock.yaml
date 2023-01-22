@@ -28,6 +28,8 @@ specifiers:
   react-dnd-html5-backend: ^16.0.1
   react-dom: ^18.2.0
   react-router-dom: ^6.4.5
+  rollup-plugin-analyzer: ^4.0.0
+  svelte: ^3.55.1
   tailwindcss: ^3.2.4
   ts-jest: ^29.0.3
   typescript: ^4.9.4
@@ -40,6 +42,7 @@ dependencies:
   react-dnd-html5-backend: 16.0.1
   react-dom: 18.2.0_react@18.2.0
   react-router-dom: 6.4.5_biqbaboplfbrettd7655fr4n2y
+  svelte: 3.55.1
   usehooks-ts: 2.9.1_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
@@ -65,6 +68,7 @@ devDependencies:
   jest: 29.3.1_@types+node@18.11.15
   postcss: 8.4.20
   prettier: 2.8.1
+  rollup-plugin-analyzer: 4.0.0
   tailwindcss: 3.2.4_postcss@8.4.20
   ts-jest: 29.0.3_p6ekqnroyms5nhqbfxosryz7rm
   typescript: 4.9.4
@@ -4465,6 +4469,11 @@ packages:
       glob: 7.2.3
     dev: true
 
+  /rollup-plugin-analyzer/4.0.0:
+    resolution: {integrity: sha512-LL9GEt3bkXp6Wa19SNR5MWcvHNMvuTFYg+eYBZN2OIFhSWN+pEJUQXEKu5BsOeABob3x9PDaLKW7w5iOJnsESQ==}
+    engines: {node: '>=8.0.0'}
+    dev: true
+
   /rollup/3.7.4:
     resolution: {integrity: sha512-jN9rx3k5pfg9H9al0r0y1EYKSeiRANZRYX32SuNXAnKzh6cVyf4LZVto1KAuDnbHT03E1CpsgqDKaqQ8FZtgxw==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
@@ -4702,6 +4711,11 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
     dev: true
+
+  /svelte/3.55.1:
+    resolution: {integrity: sha512-S+87/P0Ve67HxKkEV23iCdAh/SX1xiSfjF1HOglno/YTbSTW7RniICMCofWGdJJbdjw3S+0PfFb1JtGfTXE0oQ==}
+    engines: {node: '>= 8'}
+    dev: false
 
   /tailwindcss/3.2.4_postcss@8.4.20:
     resolution: {integrity: sha512-AhwtHCKMtR71JgeYDaswmZXhPcW9iuI9Sp2LvZPo9upDZ7231ZJ7eA9RaURbhpXGVlrjX4cFNlB4ieTetEb7hQ==}
