@@ -7,37 +7,44 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch: {}
 
 jobs:
   lint:
-    runs-on: ubuntu-18.04
+    runs-on: echoja-playground-react-linux
     name: Lint
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: '14'
       - run: yarn
       - run: yarn lint
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    timeout-minutes: 20
   build:
-    runs-on: ubuntu-18.04
+    runs-on: echoja-playground-react-linux
     needs: lint
     name: Build
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: '14'
       - run: yarn
       - run: yarn build
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    timeout-minutes: 20
   test:
-    runs-on: ubuntu-18.04
+    runs-on: echoja-playground-react-linux
     needs: build
     name: Test
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: '14'
       - run: yarn
       - run: yarn test
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    timeout-minutes: 20
